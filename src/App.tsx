@@ -14,8 +14,8 @@ function App() {
 
   useEffect(() => {
     getPosts();
-    const unsubscribeState  =usePostsStore.subscribe(({posts}, prevState)=> {
-      console.log("state >> ", posts),
+    const unsubscribeState  =usePostsStore.subscribe((state, prevState)=> {
+      console.log("state >> ", state),
       console.log("prevState >> ", prevState.posts)
     })
 
